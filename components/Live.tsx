@@ -15,8 +15,6 @@ const Live = () => {
 
   const handelPoinerLeave = useCallback((event : React.PointerEvent) => {
     event.preventDefault()
-    const x = event.clientX - event.currentTarget.getBoundingClientRect().x
-    const y = event.clientX - event.currentTarget.getBoundingClientRect().y
     updateMyPresence({cursor: null , message : null})
   },[])
 
@@ -31,7 +29,7 @@ const Live = () => {
       onPointerMove={handelPoinerMove}
       onPointerLeave={handelPoinerLeave}
       onPointerDown={handelPoinerDown}
-    className=" flex justify-center items-center" >
+      className=" h-[90vh] w-[90vw] mx-auto border-2 border-green-400 flex justify-center items-center" >
     <div>Live</div>
     <LiveCursors others={others} />
     </div>

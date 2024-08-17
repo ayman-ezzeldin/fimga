@@ -5,12 +5,8 @@ import Live from "@/components/Live";
 
 export default function Page() {
   return (
-    <div>
+    <Room>
       <Live />
-    </div>
-    // <Room>
-    //   <Aym/>
-    //   <Live />
-    // </Room>
+    </Room>
   );
 }
